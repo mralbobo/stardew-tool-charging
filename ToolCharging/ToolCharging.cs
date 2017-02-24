@@ -13,27 +13,29 @@ namespace ToolCharging
 {
     public class ToolChargingMainClass : Mod
     {
-        private static int extraRemove = 40;
-        public static ToolChargingConfig config;
+        private int extraRemove = 40;
+        //public ToolChargingConfig config;
 
-        public override void Entry(params object[] objects)
+        public override void Entry(IModHelper helper)
         {
-            config = new ToolChargingConfig().InitializeConfig(BaseConfigPath);
+            ModConfig config = helper.ReadConfig<ModConfig>();
+
+            //config = new ToolChargingConfig().InitializeConfig(BaseConfigPath);
             extraRemove = config.IncreaseBy;
 
             StardewModdingAPI.Events.GameEvents.UpdateTick += Event_Update;
         }
 
-        static void myLog(String theString)
+        private void myLog(String theString)
         {
 #if DEBUG
-            Log.Info(theString);
+            this.Monitor.Log(theString);
 #endif
 
         }
         
 
-        static void debugThing(object theObject, string descriptor = "")
+        private void debugThing(object theObject, string descriptor = "")
         {
             String thing = JsonConvert.SerializeObject(theObject, Formatting.Indented,
             new JsonSerializerSettings
@@ -44,7 +46,7 @@ namespace ToolCharging
             Console.WriteLine(descriptor + "\n" + thing);
         }
 
-        static void Event_Update(object sender, EventArgs e)
+        private void Event_Update(object sender, EventArgs e)
         {
             if(Game1.player != null)
             {
@@ -64,7 +66,7 @@ namespace ToolCharging
 
     }
 
-    public class ToolChargingConfig : Config
+    public class ModConfig
     {
         private int _increaseBy;
         public int IncreaseBy {
@@ -74,12 +76,6 @@ namespace ToolCharging
                 else if(value > 599) { _increaseBy = 599; }
                 else { _increaseBy = value; }
             }
-        }
-
-        public override T GenerateDefaultConfig<T>()
-        {
-            IncreaseBy = 40; //
-            return this as T;
         }
 
     }
