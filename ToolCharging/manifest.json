@@ -1,7 +1,7 @@
 {
    "Name": "Tool Charging",
    "Author": "mralbobo",
-   "Version": "1.1-beta1",
+   "Version": "1.2-beta1",
    "Description": "Speeds up (or slows down I guess) the charge rate of tools",
    "UniqueID": "mralbobo.ToolCharging",
    "EntryDll": "ToolCharging.dll",
