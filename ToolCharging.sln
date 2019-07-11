@@ -1,27 +1,28 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2000
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolCharging", "ToolCharging\ToolCharging.csproj", "{CDF689AF-5007-4DC3-B462-DC86412B1405}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{30240E26-4B53-408E-88FB-6564480F9A41}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolCharging", "ToolCharging\ToolCharging.csproj", "{69A82DA2-17F2-4B6F-93C2-23E823477519}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
 		Debug|x86 = Debug|x86
-		Release|Any CPU = Release|Any CPU
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Debug|x86.ActiveCfg = Debug|x86
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Debug|x86.Build.0 = Debug|x86
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Debug|x86.Deploy.0 = Debug|x86
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Release|x86.ActiveCfg = Release|x86
-		{CDF689AF-5007-4DC3-B462-DC86412B1405}.Release|x86.Build.0 = Release|x86
+		{69A82DA2-17F2-4B6F-93C2-23E823477519}.Debug|x86.ActiveCfg = Debug|x86
+		{69A82DA2-17F2-4B6F-93C2-23E823477519}.Debug|x86.Build.0 = Debug|x86
+		{69A82DA2-17F2-4B6F-93C2-23E823477519}.Release|x86.ActiveCfg = Release|x86
+		{69A82DA2-17F2-4B6F-93C2-23E823477519}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
